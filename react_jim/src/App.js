@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [tasks, setTasks] = useState([]);
+  const [input, setInput] = useState('');
+
+  const handleAddTask = () => {
+    if (!input) return; 
+    setTasks([...tasks, input]);
+    setInput(''); 
+  };
+
+  const handleDeleteTask = (index) => {
+    const newTasks = tasks.filter((task, taskIndex) => index !== taskIndex);
+    setTasks(newTasks);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <input
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        type="text"
+        placeholder="할 일을 입력하세요"
+      />
+      <button onClick={handleAddTask}>추가</button>
+      <ul>
+        {tasks.map((task, index) => (
+          <li key={index}>
+            {task} <button onClick={() => handleDeleteTask(index)}>삭제</button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

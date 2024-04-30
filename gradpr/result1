@@ -1,0 +1,7 @@
+Epoch 1, Loss: 10.658252579825264
+Epoch 2, Loss: 10.621320588248116
+Epoch 3, Loss: 10.633570398603167
+Epoch 4, Loss: 10.635783059256417
+Epoch 5, Loss: 10.619770186288017
+Train end / Eval start
+total : 100, correct : 4

@@ -1,0 +1,19 @@
+32 layer, lr:0.001
+
+Epoch : 1, Loss : 2.1910553312301637
+Epoch : 2, Loss : 1.8563476181030274
+Epoch : 3, Loss : 1.7004889154434204
+Epoch : 4, Loss : 1.6008074355125428
+Epoch : 5, Loss : 1.5293413662910462
+Test start
+Total : 1000, Correct : 426
+Total : 2000, Correct : 868
+Total : 3000, Correct : 1300
+Total : 4000, Correct : 1743
+Total : 5000, Correct : 2195
+Total : 6000, Correct : 2640
+Total : 7000, Correct : 3021
+Total : 8000, Correct : 3475
+Total : 9000, Correct : 3895
+Total : 10000, Correct : 4329
+
